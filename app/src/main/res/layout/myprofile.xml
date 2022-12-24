@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.Constraints xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MyProfile">
+    tools:context=".MyProfileActivity">
+
     <!-- MENU HAUT -->
     <!-- RETOUR -->
     <ImageView
@@ -16,7 +17,8 @@
         android:src="@drawable/retour"
         app:layout_constraintEnd_toStartOf="@+id/myprofile"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="TODO" />
 
     <!-- TEXTE "MYPROFILE" -->
     <TextView
@@ -34,7 +36,7 @@
         tools:ignore="MissingConstraints" />
 
     <!-- INFOS UTILISATEURS -->
-        <!-- PHOTOS DE PROFILE -->
+    <!-- PHOTOS DE PROFILE -->
     <ImageView
         android:id="@+id/oval4"
         android:layout_width="63dp"
@@ -43,7 +45,7 @@
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="31dp"
         tools:layout_editor_absoluteY="77dp" />
-        <!-- PSEUDO -->
+    <!-- PSEUDO -->
     <TextView
         android:id="@+id/pseudo"
         android:layout_width="280dp"
@@ -56,7 +58,7 @@
         app:layout_constraintStart_toEndOf="@+id/oval4"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteY="92dp" />
-        <!-- LOCALISATION -->
+    <!-- LOCALISATION -->
     <TextView
         android:id="@+id/localisation"
         android:layout_width="280dp"
@@ -67,9 +69,8 @@
         android:textColor="@color/black"
         android:textSize="12sp"
         app:layout_constraintStart_toEndOf="@+id/oval4"
-        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteY="119dp" />
-        <!-- DESCRIPTION -->
+    <!-- DESCRIPTION -->
     <TextView
         android:id="@+id/description"
         android:layout_width="350dp"
@@ -84,7 +85,7 @@
         app:layout_constraintTop_toBottomOf="@+id/oval4" />
 
     <!-- EDIT PROFILE -->
-        <!-- PICTOGRAMME SETTINGS -->
+    <!-- PICTOGRAMME SETTINGS -->
     <ImageView
         android:id="@+id/setting"
         android:layout_width="21dp"
@@ -95,7 +96,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- BUTTON SETTINGS -->
+    <!-- BUTTON SETTINGS -->
     <Button
         android:id="@+id/registration"
         android:layout_width="320dp"
@@ -111,7 +112,7 @@
         tools:layout_editor_absoluteX="45dp" />
 
     <!-- INFO FOLLOWERS/FOLLOWING/POSTS -->
-        <!-- FOLLOWING -->
+    <!-- FOLLOWING -->
     <TextView
         android:id="@+id/nbFollowing"
         android:layout_width="46dp"
@@ -137,7 +138,7 @@
         app:layout_constraintTop_toBottomOf="@+id/nbFollowing"
         tools:ignore="MissingConstraints,SmallSp"
         tools:layout_editor_absoluteX="169dp" />
-        <!-- DIVIDER -->
+    <!-- DIVIDER -->
     <ImageView
         android:id="@+id/line"
         android:layout_width="38dp"
@@ -147,7 +148,7 @@
         app:layout_constraintEnd_toStartOf="@+id/followers"
         app:layout_constraintStart_toEndOf="@+id/following"
         app:layout_constraintTop_toBottomOf="@+id/registration" />
-        <!-- POSTS -->
+    <!-- POSTS -->
     <TextView
         android:id="@+id/post"
         android:layout_width="46dp"
@@ -174,7 +175,7 @@
         app:layout_constraintTop_toTopOf="@+id/nbFollowing"
         tools:ignore="MissingConstraints,SmallSp"
         tools:layout_editor_absoluteX="63dp" />
-        <!-- DIVIDER -->
+    <!-- DIVIDER -->
     <ImageView
         android:id="@+id/line2"
         android:layout_width="38dp"
@@ -184,7 +185,7 @@
         app:layout_constraintEnd_toStartOf="@+id/following"
         app:layout_constraintStart_toEndOf="@+id/post"
         app:layout_constraintTop_toBottomOf="@+id/registration" />
-        <!-- FOLLOWERS -->
+    <!-- FOLLOWERS -->
     <TextView
         android:id="@+id/nbFollowers"
         android:layout_width="46dp"
@@ -213,7 +214,7 @@
         tools:ignore="MissingConstraints,SmallSp" />
 
     <!-- TIMELINE POSTS -->
-        <!-- TEXTE "POSTS" -->
+    <!-- TEXTE "POSTS" -->
     <TextView
         android:id="@+id/postfix"
         android:layout_width="344dp"
@@ -230,7 +231,7 @@
         tools:ignore="MissingConstraints" />
 
     <!-- MENU BAS -->
-        <!-- FOND -->
+    <!-- FOND -->
     <ImageView
         android:id="@+id/menu"
         android:layout_width="417dp"
@@ -239,7 +240,7 @@
         android:src="@drawable/union"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:ignore="MissingConstraints" />
-        <!-- HOME -->
+    <!-- HOME -->
     <ImageView
         android:id="@+id/home"
         android:layout_width="46dp"
@@ -249,7 +250,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/notification"
         app:layout_constraintStart_toStartOf="@+id/menu" />
-        <!-- NOTIF -->
+    <!-- NOTIF -->
     <ImageView
         android:id="@+id/notification"
         android:layout_width="46dp"
@@ -259,7 +260,7 @@
         android:src="@drawable/notification"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/newpost" />
-        <!-- NEW POSTS -->
+    <!-- NEW POSTS -->
     <ImageView
         android:id="@+id/newpost"
         android:layout_width="46dp"
@@ -269,7 +270,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-        <!-- CHATS -->
+    <!-- CHATS -->
     <ImageView
         android:id="@+id/chat"
         android:layout_width="46dp"
@@ -279,7 +280,7 @@
         android:src="@drawable/chat"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/newpost" />
-        <!-- PROFILE -->
+    <!-- PROFILE -->
     <ImageView
         android:id="@+id/profile"
         android:layout_width="46dp"
@@ -291,4 +292,9 @@
         app:layout_constraintStart_toEndOf="@+id/chat" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.Constraints>
+
+
+
+
+

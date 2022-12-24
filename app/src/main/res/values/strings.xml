@@ -23,10 +23,18 @@
     <string name="nbFollowing">870</string>
     <string name="nbFollowers">15k</string>
 
-
-
-
-
+    /* Content */
+    <string name="oval4">oval4</string>
+    <string name="retour">retour</string>
+    <string name="setting">setting</string>
+    <string name="line">line</string>
+    <string name="line2">line2</string>
+    <string name="menu">menu</string>
+    <string name="home">home</string>
+    <string name="notification">notification</string>
+    <string name="newpost">newpost</string>
+    <string name="profile">profile</string>
+    <string name="chat">chat</string>
 
 
 </resources>
