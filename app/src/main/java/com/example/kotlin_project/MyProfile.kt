@@ -7,6 +7,6 @@ import androidx.appcompat.app.AppCompatActivity
 class MyProfile : AppCompatActivity()  {
     override fun  onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.profile)
+        setContentView(R.layout.myprofile)
     }
 }
