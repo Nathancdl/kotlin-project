@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".edit_profile">
+
+    <!-- Header -->
+    <ImageView
+        android:id="@+id/retour2"
+        android:layout_width="17dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="45dp"
+        android:contentDescription="@string/retour"
+        android:src="@drawable/retour"
+        app:layout_constraintEnd_toStartOf="@+id/myprofile2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/myprofile2"
+        android:layout_width="129dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/editmyprofile"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!-- Actual info  -->
+    <!-- PP  -->
+    <ImageView
+        android:id="@+id/oval"
+        android:layout_width="63dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="70dp"
+        android:contentDescription="@string/oval4"
+        android:src="@drawable/oval_blast_off_bronze"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/camera"
+        android:layout_width="22dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="130dp"
+        android:contentDescription="@string/deleteProfile"
+        android:src="@drawable/camera"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Pseudo, Ville & description  -->
+    <TextView
+        android:id="@+id/pseudo"
+        android:layout_width="280dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/pseudo"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/description2"
+        app:layout_constraintStart_toEndOf="@+id/oval"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/localisation2"
+        android:layout_width="280dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/villeandcountry"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/oval"
+        app:layout_constraintTop_toBottomOf="@+id/pseudo" />
+
+    <TextView
+        android:id="@+id/description2"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/desc"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/oval" />
+
+    <!-- Nom d'utilisateur  -->
+    <TextView
+        android:id="@+id/NomUtilisateurs"
+        android:layout_width="106dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/nomutilisateur"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description2"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/rectangles"
+        android:layout_width="362dp"
+        android:layout_height="61dp"
+        android:contentDescription="@string/retour"
+        android:src="@drawable/bigrectangle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NomUtilisateurs" />
+
+
+    <EditText
+        android:id="@+id/nomUtilisateur"
+        android:layout_width="340dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NomUtilisateurs"
+        tools:ignore="MissingConstraints" />
+
+    <!-- Localisation  -->
+    <TextView
+        android:id="@+id/textelocalisation"
+        android:layout_width="106dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/Localisation"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NomUtilisateurs"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/rectangleslocalisation"
+        android:layout_width="362dp"
+        android:layout_height="61dp"
+        android:contentDescription="rectangleslocalisation"
+        android:src="@drawable/bigrectangle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textelocalisation"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/localisation"
+        android:layout_width="340dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textelocalisation"
+        tools:ignore="MissingConstraints" />
+
+
+    <!-- TEL  -->
+    <TextView
+        android:id="@+id/textetel"
+        android:layout_width="106dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/Tel"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textelocalisation"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/rectanglestel"
+        android:layout_width="175dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="20dp"
+        android:contentDescription="rectanglestel"
+        android:src="@drawable/smallrectangle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textetel"
+        tools:ignore="MissingConstraints" />
+
+
+    <EditText
+        android:id="@+id/tel"
+        android:layout_width="153dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textetel"
+        tools:ignore="MissingConstraints" />
+
+    <!-- MDP  -->
+    <TextView
+        android:id="@+id/textemdp"
+        android:layout_width="106dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="80dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/mdp"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textelocalisation"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/rectanglesmdp"
+        android:layout_width="175dp"
+        android:layout_height="52dp"
+        android:layout_marginEnd="20dp"
+        android:contentDescription="rectanglesmdp"
+        android:src="@drawable/smallrectangle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textemdp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/mdp"
+        android:layout_width="151dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textemdp"
+        tools:ignore="MissingConstraints" />
+
+    <!-- AboutME  -->
+    <TextView
+        android:id="@+id/texteaboutme"
+        android:layout_width="106dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/aboutme"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textetel"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/rectanglesaboutme"
+        android:layout_width="362dp"
+        android:layout_height="110dp"
+        android:contentDescription="rectanglesaboutme"
+        android:src="@drawable/fatrectangle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/texteaboutme"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/aboutme"
+        android:layout_width="362dp"
+        android:layout_height="110dp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/texteaboutme"
+        tools:ignore="MissingConstraints" />
+
+    <!-- UpdateProfile  -->
+    <Button
+        android:id="@+id/registration"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/orange"
+        android:text="@string/update"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rectanglesaboutme"
+        tools:ignore="MissingConstraints" />
+
+    <!-- DeleteProfile  -->
+    <ImageView
+        android:id="@+id/trash"
+        android:layout_width="29dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="30dp"
+        android:contentDescription="trash"
+        android:src="@drawable/trash"
+        app:layout_constraintEnd_toStartOf="@+id/deleteprofile"
+        app:layout_constraintTop_toBottomOf="@+id/registration"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/deleteprofile"
+        android:layout_width="172dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/deleteProfile"
+        android:textColor="@color/orange"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registration"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

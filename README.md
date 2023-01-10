@@ -1,0 +1,9 @@
+PROJET : Développement d’une application réseau social pour Android Pour l’école Iris, il vous est demandé de développer un réseau social. FONCTIONNALITÉS Ce réseau social devra comporter au minimum les fonctionnalités suivantes : · Espace utilisateur (création de compte, récupération de mot de passe, compte utilisateur, bonus : création à travers un compte Google) · Timeline (fil d’actualité) · Chat (discussion instantané) · Gestionnaire de contacts (ajout, modification, suppression de contacts) · Tout autre module que vous jugerez pertinent Le développement se fera en groupe de 4 personnes maximum Vous serez en compétition avec les autres étudiants : l’application la plus originale et la plus complète aura la meilleure note. Une présentation à l’orale de l’application sera faite (PowerPoint conseillé) TECHNOLOGIES · Langage de développement : Kotlin (90% dans ce langage) · minSdkVersion : 21 · targetSdkVersion : 32 · Stockage des données via Firebase Notation · 10 points pour la partie Gestion de projet (planification, répartition des tâches, cahier des charges) · 20 points pour la partie Développement (technicité, propreté du code, organisation des fichiers) · 10 points pour la partie orale (organisation de la présentation, qualité d’orateur, réponses aux questions) Total : 40 points
+
+Durée La durée du projet est prévue sur 8 semaines pour une équipe de 4 personnes.
+
+Étape 1 : 18 octobre 2022 Livraison cahier des charges et maquettisation
+
+Etape 2 : 15 novembre 2022
+
+Etape finale : livraison : avant dernière semaine de décembre (21 décembre 2022) Si besoin, prolongation jusqu’au 6 janvier 2023. Présentation orale : début janvier (semaine du 10 janvier 2023)
