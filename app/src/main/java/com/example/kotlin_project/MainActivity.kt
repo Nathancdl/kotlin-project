@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
 }*/
 
 
-        //test 
+        //test
 }
 
 /*suspend fun nextscreen(){
