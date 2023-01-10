@@ -13,7 +13,7 @@
         android:theme="@style/Theme.KotlinProject"
         tools:targetApi="31">
         <activity
-            android:name=".SecondActivity"
+            android:name=".ConnectionLoginActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -22,7 +22,6 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
             android:theme="@style/Theme.KotlinProject.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
