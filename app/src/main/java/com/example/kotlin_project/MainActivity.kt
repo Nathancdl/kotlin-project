@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
     suspend fun nextscreen(){
         //function async excute after launch first layout
         delay(2000)
-        val intent = Intent(this, MyProfile::class.java)
+        val intent = Intent(this, Profile::class.java)
         startActivity(intent);
 
     }
