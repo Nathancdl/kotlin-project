@@ -1,9 +1,40 @@
 <resources>
     <string name="app_name">COOKING NETWORK</string>
-    <string name="connexion_login_title">Une application rempli de recettes !</string>
-    <string name="connexion_login_text">Un nouveau réseau social qui réunit toutes les recettes de nos utilisateurs !</string>
+    <string name="desc">Ta description doit faire moins de 206caractères !</string>
     <string name="registration">Inscription</string>
+    <string name="connexion_login_title">connexion_login_title </string>
+    <string name="connexion_login_text">connexion_login_text</string>
     <string name="ignore">Ignorer</string>
     <string name="account_exist">Vous avez déjà un compte ?</string>
     <string name="connection">Connexion</string>
+
+
+    /* Profiles */
+    <string name="pseudo">Oyin Dolapo</string>
+    <string name="villeandcountry">Abeokuta, Ogun</string>
+    <string name="myprofile">My Profile</string>
+    <string name="editprofile">Edit Profile</string>
+
+    <string name="post">Posts</string>
+    <string name="Following">Following</string>
+    <string name="Followers">Followers</string>
+
+    <string name="nbPost">87</string>
+    <string name="nbFollowing">870</string>
+    <string name="nbFollowers">15k</string>
+
+    /* Content */
+    <string name="oval4">oval4</string>
+    <string name="retour">retour</string>
+    <string name="setting">setting</string>
+    <string name="line">line</string>
+    <string name="line2">line2</string>
+    <string name="menu">menu</string>
+    <string name="home">home</string>
+    <string name="notification">notification</string>
+    <string name="newpost">newpost</string>
+    <string name="profile">profile</string>
+    <string name="chat">chat</string>
+
+
 </resources>
