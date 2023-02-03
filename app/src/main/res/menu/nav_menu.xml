@@ -1,4 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-  
+
+    <item
+        android:id="@+id/mihome"
+        android:icon="@drawable/home"
+        android:title="@string/home" />
+
+    <item
+        android:id="@+id/minewpost"
+        android:icon="@drawable/newpost"
+        android:title="@string/newpost" />
+
+    <item
+        android:id="@+id/misetting"
+        android:icon="@drawable/setting"
+        android:title="@string/setting" />
+
 </menu>

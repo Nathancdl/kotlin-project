@@ -7,10 +7,11 @@
     tools:context=".MainScreen">
 
     <TextView
-        android:id="@+id/hometext"
+        android:id="@+id/newpost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="home page"
+        android:text="new post"
+        android:textColor="@color/black"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

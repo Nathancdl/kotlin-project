@@ -7,6 +7,15 @@
     <string name="account_exist">Vous avez déjà un compte ?</string>
     <string name="connection">Connexion</string>
 
+    /* Menu */
+    <string name="home">Home</string>
+    <string name="newpost">New post</string>
+    <string name="setting">Setting</string>
+
+    /*Home*/
+    <string name="welcome">Bienvenue,</string>
+
+
     /* Profiles */
     <string name="pseudo">Oyin Dolapo</string>
     <string name="villeandcountry">Abeokuta, Ogun</string>
@@ -33,17 +42,16 @@
     <string name="deleteProfile">SUPPRIMER PROFILE</string>
 
 
-
     /* Content */
     <string name="oval4">oval4</string>
     <string name="retour">retour</string>
-    <string name="setting">setting</string>
+
     <string name="line">line</string>
     <string name="line2">line2</string>
     <string name="menu">menu</string>
-    <string name="home">home</string>
+
     <string name="notification">notification</string>
-    <string name="newpost">newpost</string>
+
     <string name="profile">profile</string>
     <string name="chat">chat</string>
 

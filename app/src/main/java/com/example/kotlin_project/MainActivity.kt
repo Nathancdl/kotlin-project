@@ -10,21 +10,13 @@ import kotlinx.coroutines.launch
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_my_profile)
+        //setContentView(R.layout.connection_login)
 
-/*GlobalScope.launch{
-    nextscreen()
-}*/
+        //setContentView(R.layout.activity_my_profile)
 
-
-        //test
+        //setContentView(R.layout.activity_main_screen)
+        val intent = Intent(this, MainScreen::class.java)
+        startActivity(intent)
 }
 
-/*suspend fun nextscreen(){
-//function async excute after launch first layout
-delay(2000)
-val intent = Intent(this, MyProfileActivity::class.java)
-startActivity(intent);
-
-}*/
 }

@@ -2,6 +2,8 @@ package com.example.kotlin_project
 
 import androidx.fragment.app.Fragment
 
-class NewPostFragment : Fragment(R.layout.fragment_newpost){
-    
+class SettingsFragment : Fragment(R.layout.activity_my_profile){
+
+
+
 }

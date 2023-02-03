@@ -1,6 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/nameuserpost"
+            android:layout_width="109dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="NameUser"
+            android:textColor="@color/orange"
+            app:layout_constraintStart_toEndOf="@+id/shapeableImageView"
+            app:layout_constraintTop_toTopOf="@+id/shapeableImageView" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/shapeableImageView"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="76dp"
+            android:layout_marginTop="56dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/Circular"
+            tools:ignore="MissingConstraints"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <ImageView
+            android:id="@+id/imageclock"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="88dp"
+            app:layout_constraintEnd_toEndOf="@+id/nameuserpost"
+            app:layout_constraintTop_toBottomOf="@+id/nameuserpost"
+            app:srcCompat="@drawable/clock" />
+
+        <TextView
+            android:id="@+id/datepublication"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            tools:text="21/10/2023"
+            app:layout_constraintStart_toEndOf="@+id/imageclock"
+            app:layout_constraintTop_toTopOf="@+id/imageclock" />
+
+        <ImageView
+            android:id="@+id/imagelevel"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="15dp"
+            app:layout_constraintStart_toEndOf="@+id/datepublication"
+            app:layout_constraintTop_toTopOf="@+id/datepublication"
+            app:srcCompat="@drawable/level" />
+
+        <TextView
+            android:id="@+id/level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            tools:text="facile"
+            app:layout_constraintStart_toEndOf="@+id/imagelevel"
+            app:layout_constraintTop_toTopOf="@+id/imagelevel" />
+
+        <ImageView
+            android:id="@+id/imagecost"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="15dp"
+            app:layout_constraintStart_toEndOf="@+id/level"
+            app:layout_constraintTop_toTopOf="@+id/level"
+            app:srcCompat="@drawable/cost" />
+
+        <TextView
+            android:id="@+id/cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            app:layout_constraintStart_toEndOf="@+id/imagecost"
+            app:layout_constraintTop_toTopOf="@+id/imagecost"
+            tools:text="Peu chère" />
+
+        <TextView
+            android:id="@+id/contentpost"
+            android:layout_width="568dp"
+            android:layout_height="134dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/poppins_regular"
+            tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc euismod consectetur tortor, ut gravida mi iaculis quis. Nam vel ullamcorper ante. Mauris nunc nisl, feugiat nec lacinia a, maximus vestibulum nisi. Ut a urna at elit tincidunt dapibus. In ullamcorper mi eget nulla malesuada imperdiet. Morbi nisi quam, iaculis quis semper a, lacinia placerat elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;"
+            app:layout_constraintStart_toStartOf="@+id/shapeableImageView"
+            app:layout_constraintTop_toBottomOf="@+id/shapeableImageView" />
+
+        <ImageButton
+            android:id="@+id/imagelike"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="48dp"
+            android:background="@null"
+            android:scaleType="fitStart"
+            android:text="@string/welcome"
+            app:layout_constraintStart_toStartOf="@+id/contentpost"
+            app:layout_constraintTop_toBottomOf="@+id/contentpost"
+            app:srcCompat="@drawable/like" />
+
+        <TextView
+            android:id="@+id/likenumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="12dp"
+            android:text="TextView"
+            app:layout_constraintStart_toStartOf="@+id/imagelike"
+            app:layout_constraintTop_toTopOf="@+id/imagelike" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>
