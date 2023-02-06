@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import android.widget.LinearLayout
 import android.widget.ScrollView
 import android.widget.TextView
@@ -14,35 +15,23 @@ class HomeFragment : Fragment(R.layout.fragment_home){
 
     @SuppressLint("MissingInflatedId")
     override fun onCreateView(
-
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
 
 
-        val layoutInflater = LayoutInflater.from(context)
 
-        // Inflater le layout XML en une vue
         val rootView = inflater.inflate(R.layout.fragment_home, container, false)
 
-        // Obtenir une référence à la vue container
+
         val scrollView = rootView.findViewById<ScrollView>(R.id.MainScrollView)
 
-        // Créer un conteneur LinearLayout
 
         val linearLayout = scrollView.findViewById<LinearLayout>(R.id.scrolllinearlayout)
 
 
-        val text1 = "Text 1"
-
-        linearLayout.addView(createVisualElement(inflater, linearLayout, text1))
-        linearLayout.addView(createVisualElement(inflater, linearLayout, text1))
-        linearLayout.addView(createVisualElement(inflater, linearLayout, text1))
-        linearLayout.addView(createVisualElement(inflater, linearLayout, text1))
-        linearLayout.addView(createVisualElement(inflater, linearLayout, text1))
-        linearLayout.addView(createVisualElement(inflater, linearLayout, text1))
-        linearLayout.addView(createVisualElement(inflater, linearLayout, text1))
+        linearLayout.addView(createViewPost( "1",inflater, linearLayout, "username", "content texte", 2, 2))
 
 
         /*
@@ -50,6 +39,9 @@ class HomeFragment : Fragment(R.layout.fragment_home){
         */
         return rootView
     }
+
+
+
     /*
     override fun onStart() {
         super.onStart();
@@ -63,12 +55,43 @@ class HomeFragment : Fragment(R.layout.fragment_home){
         //createVisualElement(layoutInflater.from())
     }*/
 
-    fun createVisualElement(
+
+
+
+    fun createViewPost(
+        UserId: String,
         inflater: LayoutInflater,
         container: ViewGroup?,
-        text: String
+        NameUserPost: String,
+        ContentPost: String,
+        LikeNumber : Int,
+        CommentNumber : Int
     ): View {
-        val view = inflater.inflate(R.layout.visual_post, container, false)
+        val view : View = inflater.inflate(R.layout.visual_post, container, false)
+        view.findViewById<TextView>(R.id.nameusercomment).text = NameUserPost
+        view.findViewById<TextView>(R.id.contentpost).text = ContentPost
+        view.findViewById<TextView>(R.id.likenumber).text = LikeNumber.toString()
+        view.findViewById<TextView>(R.id.commentnumber).text = CommentNumber.toString()
+        view.findViewById<ImageButton>(R.id.imagelike).setOnClickListener{
+            addLike(UserId)
+            view.findViewById<TextView>(R.id.likenumber).text = (LikeNumber + 1).toString()
+
+        }
+
+        view.findViewById<ImageButton>(R.id.imagecomment).setOnClickListener{
+            // Affiche les commentaires
+            val fragmentManager = fragmentManager
+            val fragmentTransaction = fragmentManager?.beginTransaction()
+            val newFragment = HomeFragmentComment()
+            fragmentTransaction?.replace(R.id.fragment_container, newFragment)
+            fragmentTransaction?.addToBackStack(null)
+            fragmentTransaction?.commit()
+        }
+
         return view
+    }
+
+    fun addLike(UserId : String){
+        //Add like to user
     }
 }

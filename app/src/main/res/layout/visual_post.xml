@@ -12,23 +12,23 @@
 
 
         <TextView
-            android:id="@+id/nameuserpost"
+            android:id="@+id/nameusercomment"
             android:layout_width="109dp"
             android:layout_height="32dp"
             android:layout_marginStart="15dp"
             android:layout_marginTop="4dp"
             android:fontFamily="@font/poppins_semibold"
-            android:text="NameUser"
+            tools:text="NameUser"
             android:textColor="@color/orange"
-            app:layout_constraintStart_toEndOf="@+id/shapeableImageView"
-            app:layout_constraintTop_toTopOf="@+id/shapeableImageView" />
+            app:layout_constraintStart_toEndOf="@+id/imageprofile"
+            app:layout_constraintTop_toTopOf="@+id/imageprofile" />
 
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/shapeableImageView"
+            android:id="@+id/imageprofile"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:layout_marginStart="76dp"
-            android:layout_marginTop="56dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="44dp"
             android:adjustViewBounds="true"
             android:scaleType="fitCenter"
             app:layout_constraintStart_toStartOf="parent"
@@ -43,8 +43,8 @@
             android:layout_height="20dp"
             android:layout_marginTop="4dp"
             android:layout_marginEnd="88dp"
-            app:layout_constraintEnd_toEndOf="@+id/nameuserpost"
-            app:layout_constraintTop_toBottomOf="@+id/nameuserpost"
+            app:layout_constraintEnd_toEndOf="@+id/nameusercomment"
+            app:layout_constraintTop_toBottomOf="@+id/nameusercomment"
             app:srcCompat="@drawable/clock" />
 
         <TextView
@@ -94,35 +94,56 @@
 
         <TextView
             android:id="@+id/contentpost"
-            android:layout_width="568dp"
-            android:layout_height="134dp"
-            android:layout_marginTop="24dp"
+            android:layout_width="376dp"
+            android:layout_height="121dp"
+            android:layout_marginTop="8dp"
             android:fontFamily="@font/poppins_regular"
             tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc euismod consectetur tortor, ut gravida mi iaculis quis. Nam vel ullamcorper ante. Mauris nunc nisl, feugiat nec lacinia a, maximus vestibulum nisi. Ut a urna at elit tincidunt dapibus. In ullamcorper mi eget nulla malesuada imperdiet. Morbi nisi quam, iaculis quis semper a, lacinia placerat elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;"
-            app:layout_constraintStart_toStartOf="@+id/shapeableImageView"
-            app:layout_constraintTop_toBottomOf="@+id/shapeableImageView" />
+            app:layout_constraintStart_toStartOf="@+id/imageprofile"
+            app:layout_constraintTop_toBottomOf="@+id/imageprofile" />
 
         <ImageButton
             android:id="@+id/imagelike"
-            android:layout_width="120dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="48dp"
+            android:layout_width="154dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
             android:background="@null"
             android:scaleType="fitStart"
-            android:text="@string/welcome"
             app:layout_constraintStart_toStartOf="@+id/contentpost"
             app:layout_constraintTop_toBottomOf="@+id/contentpost"
             app:srcCompat="@drawable/like" />
 
+        <ImageButton
+            android:id="@+id/imagecomment"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="56dp"
+            android:background="@null"
+            android:scaleType="fitStart"
+            app:layout_constraintStart_toEndOf="@+id/imagelike"
+            app:layout_constraintTop_toTopOf="@+id/imagelike"
+            app:srcCompat="@drawable/commentaire" />
+
         <TextView
             android:id="@+id/likenumber"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="54dp"
+            android:layout_height="20dp"
             android:layout_marginStart="48dp"
             android:layout_marginTop="12dp"
-            android:text="TextView"
             app:layout_constraintStart_toStartOf="@+id/imagelike"
-            app:layout_constraintTop_toTopOf="@+id/imagelike" />
+            app:layout_constraintTop_toTopOf="@+id/imagelike"
+            tools:text="8,998" />
+
+        <TextView
+            android:id="@+id/commentnumber"
+            android:layout_width="50dp"
+            android:layout_height="21dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="@+id/imagecomment"
+            app:layout_constraintTop_toTopOf="@+id/imagecomment"
+            tools:text="8,998" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

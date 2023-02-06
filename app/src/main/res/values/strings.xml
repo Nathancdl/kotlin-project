@@ -15,6 +15,10 @@
     /*Home*/
     <string name="welcome">Bienvenue,</string>
 
+    /*comment*/
+
+    <string name="comment">Commentaire</string>
+
 
     /* Profiles */
     <string name="pseudo">Oyin Dolapo</string>
