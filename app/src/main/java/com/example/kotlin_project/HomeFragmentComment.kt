@@ -43,7 +43,7 @@ class HomeFragmentComment : Fragment(R.layout.visual_post_comment){
         TextContent: String
     ) : View {
         val view : View = inflater.inflate(R.layout.visual_post_one_comment, container, false)
-        view.findViewById<TextView>(R.id.nameusercomment).text = TextContent
+        view.findViewById<TextView>(R.id.nameusercomment).text = NameUser
         view.findViewById<TextView>(R.id.commentcontent).text = TextContent
         return view
     }
