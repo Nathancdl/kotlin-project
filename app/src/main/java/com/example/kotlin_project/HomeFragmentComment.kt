@@ -28,6 +28,16 @@ class HomeFragmentComment : Fragment(R.layout.visual_post_comment){
             fragmentManager?.popBackStack()
         }
 
+
+        rootView.findViewById<Button>(R.id.buttonaddnewcomment).setOnClickListener{
+            val fragmentManager = fragmentManager
+            val fragmentTransaction = fragmentManager?.beginTransaction()
+            val newFragment = HomeFragmentCommentAdd()
+            fragmentTransaction?.replace(R.id.frame_comment, newFragment)
+            fragmentTransaction?.addToBackStack(null)
+            fragmentTransaction?.commit()
+        }
+
         val linearLayout : LinearLayout = rootView.findViewById<LinearLayout>(R.id.commentlayout)
 
         linearLayout.addView(createComment(inflater, container, "Alex","text comment"))

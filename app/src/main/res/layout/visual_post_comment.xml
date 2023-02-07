@@ -7,46 +7,69 @@
     android:background="@color/white"
     >
 
-    <ImageButton
-        android:id="@+id/buttonback"
-        android:layout_width="40dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:background="@null"
-
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/back"
-        android:scaleType="fitCenter"
-        />
-
-    <TextView
-        android:id="@+id/textcomment"
-        android:layout_width="158dp"
-        android:layout_height="34dp"
-        android:layout_marginTop="28dp"
-        android:gravity="center"
-        android:text="@string/comment"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ScrollView
+    <FrameLayout
+        android:id="@+id/frame_comment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="88dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="match_parent">
 
-        <LinearLayout
-            android:id="@+id/commentlayout"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
-    </ScrollView>
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/buttonback"
+                android:layout_width="40dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@null"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/back"
+                android:scaleType="fitCenter"
+                />
+
+            <TextView
+                android:id="@+id/textcomment"
+                android:layout_width="140dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="28dp"
+                android:gravity="center"
+                android:text="@string/comment"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="88dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/commentlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+            </ScrollView>
+
+            <Button
+                android:id="@+id/buttonaddnewcomment"
+                android:layout_width="107dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="10dp"
+                android:text="@string/newcomment"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

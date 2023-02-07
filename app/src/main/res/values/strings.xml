@@ -6,6 +6,7 @@
     <string name="ignore">Ignorer</string>
     <string name="account_exist">Vous avez déjà un compte ?</string>
     <string name="connection">Connexion</string>
+    <string name="submit">Poster</string>
 
     /* Menu */
     <string name="home">Home</string>
@@ -18,6 +19,7 @@
     /*comment*/
 
     <string name="comment">Commentaire</string>
+    <string name="newcomment">Ajouter</string>
 
 
     /* Profiles */

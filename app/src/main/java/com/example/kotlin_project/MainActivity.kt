@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         val intent = Intent(this, MainScreen::class.java)
+        //val intent = Intent(this, ConnectionLoginActivity::class.java)
         startActivity(intent)
 }
 

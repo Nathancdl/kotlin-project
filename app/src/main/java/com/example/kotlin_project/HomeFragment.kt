@@ -20,8 +20,6 @@ class HomeFragment : Fragment(R.layout.fragment_home){
         savedInstanceState: Bundle?
     ): View {
 
-
-
         val rootView = inflater.inflate(R.layout.fragment_home, container, false)
 
 

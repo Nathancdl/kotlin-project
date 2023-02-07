@@ -1,6 +1,12 @@
 package com.example.kotlin_project
 
+import android.annotation.SuppressLint
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.Button
+import android.widget.TextView
 import androidx.databinding.DataBindingUtil.setContentView
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
@@ -16,23 +22,48 @@ class SettingsFragment : Fragment(R.layout.activity_my_profile) {
     private lateinit var binding: ActivityMyProfileBinding
     private lateinit var firebaseAuth : FirebaseAuth
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    @SuppressLint("MissingInflatedId")
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?) : View {
+
+        //super.onCreate(savedInstanceState)
+
+        val rootView = inflater.inflate(R.layout.activity_my_profile, container, false)
+
+
+        rootView.findViewById<Button>(R.id.editprofile).setOnClickListener{
+
+            val fragmentManager = fragmentManager
+            val fragmentTransaction = fragmentManager?.beginTransaction()
+            val newFragment = edit_profile()
+            fragmentTransaction?.replace(R.id.frame_editprofile, newFragment)
+            fragmentTransaction?.addToBackStack(null)
+            fragmentTransaction?.commit()
+        }
+
+
         binding = ActivityMyProfileBinding.inflate(layoutInflater)
 
         firebaseAuth = FirebaseAuth.getInstance()
         firebaseAuth.signInWithEmailAndPassword("e.merhrioui@gmail.com","EliasMrh")
-        loadUserInfo()
+        loadUserInfo(rootView)
+
+        return rootView;
+
     }
 
-    private fun loadUserInfo(){
+    private fun loadUserInfo(rootView : View){
         //Reference pour charger informations d'utilisateurs
         val ref = FirebaseDatabase.getInstance().getReference("Users")
 
-        ref.child("C8Xqdiz90932")
+        ref.child("eQZDdsrZhDygfeEZQD")
             .addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     //get profile info
+
+
                     val uid = "${snapshot.child("uid").value}"
                     val email = "${snapshot.child("email").value}"
                     val profileImage = "${snapshot.child("profileImage").value}"
@@ -41,27 +72,16 @@ class SettingsFragment : Fragment(R.layout.activity_my_profile) {
                     val description = "${snapshot.child("description").value}"
                     val nbFollowers = "${snapshot.child("nbFollowers").value}"
                     val nbFollowing = "${snapshot.child("nbFollowing").value}"
-                    val nbPosts = "${snapshot.child("nbPosts").value}"
+                    val nbPost = "${snapshot.child("nbPosts").value}"
                     val userType = "${snapshot.child("userType").value}"
 
 
-                    println(profileImage)
-                    println(pseudo)
-                    println(localisation)
-                    println(description)
-                    println(nbFollowers)
-                    println(nbFollowing)
-                    println(nbPosts)
-
-
-                    //set data
-
-                    binding.pseudo.text = pseudo
-                    binding.localisation.text = localisation
-                    binding.description.text = description
-                    binding.nbFollowing.text = nbFollowing
-                    binding.nbFollowers.text = nbFollowers
-                    binding.nbPost.text = nbPosts
+                    rootView.findViewById<TextView>(R.id.pseudo).text = pseudo
+                    rootView.findViewById<TextView>(R.id.localisation).text = localisation
+                    rootView.findViewById<TextView>(R.id.description).text = description
+                    rootView.findViewById<TextView>(R.id.nbFollowers).text = nbFollowers
+                    rootView.findViewById<TextView>(R.id.nbFollowing).text = nbFollowing
+                    rootView.findViewById<TextView>(R.id.nbPost).text = nbPost
 
 
 
