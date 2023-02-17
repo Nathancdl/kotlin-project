@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistrationActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textViewfillfields"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/fillfields"
+                    app:layout_constraintStart_toStartOf="@+id/textViewpersonalinformation"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewpersonalinformation" />
+
+                <ImageButton
+                    android:id="@+id/buttonbackregister"
+                    android:layout_width="40dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@null"
+
+                    android:scaleType="fitCenter"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/back" />
+
+                <TextView
+                    android:id="@+id/textViewpersonalinformation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="76dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/personalinformation"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textViewfullname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="164dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/fullname"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textViewemail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="28dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/email"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/frameLayoutfullname" />
+
+                <TextView
+                    android:id="@+id/textViewusername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="28dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/username"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/frameLayoutbirth" />
+
+                <TextView
+                    android:id="@+id/textViewpassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="28dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/password"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/frameLayoutusername" />
+
+                <Button
+                    android:id="@+id/button_connectioninregister"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="210dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="40dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/connection"
+                    android:textColor="@color/orange"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.497"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView8" />
+
+                <TextView
+                    android:id="@+id/textViewconfirmpassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="28dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/confirmepassword"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/frameLayoutpassword" />
+
+                <TextView
+                    android:id="@+id/textViewbirth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginTop="28dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/birth"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/frameLayoutemail" />
+
+                <TextView
+                    android:id="@+id/textViewbirth2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/genre"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@+id/frameLayoutgenre"
+                    app:layout_constraintTop_toTopOf="@+id/textViewbirth" />
+
+                <FrameLayout
+                    android:id="@+id/frameLayoutfullname"
+                    android:layout_width="309dp"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/orange"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.494"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewfullname">
+
+                    <EditText
+                        android:id="@+id/edittextfullname"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2dp"
+                        android:background="@color/gray"
+                        android:ems="10"
+                        tools:ignore="MissingConstraints" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frameLayoutemail"
+                    android:layout_width="309dp"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/orange"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.49"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewemail">
+
+                    <EditText
+                        android:id="@+id/edittextemail"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2dp"
+                        android:background="@color/gray"
+                        android:ems="10"
+                        tools:ignore="MissingConstraints" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frameLayoutbirth"
+                    android:layout_width="120dp"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/orange"
+                    app:layout_constraintStart_toStartOf="@+id/frameLayoutemail"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewbirth">
+
+                    <EditText
+                        android:id="@+id/edittextebirth"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2dp"
+                        android:background="@color/gray"
+                        android:ems="10"
+                        android:inputType="date"
+                        tools:ignore="MissingConstraints" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frameLayoutgenre"
+                    android:layout_width="120dp"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/orange"
+                    app:layout_constraintEnd_toEndOf="@+id/frameLayoutemail"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewbirth">
+
+                    <Spinner
+                        android:id="@+id/spinnergenre"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2dp"
+                        android:background="@color/gray"
+                        android:spinnerMode="dropdown" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frameLayoutusername"
+                    android:layout_width="309dp"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/orange"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.49"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewusername">
+
+                    <EditText
+                        android:id="@+id/edittextusername"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2dp"
+                        android:background="@color/gray"
+                        android:ems="10"
+                        tools:ignore="MissingConstraints" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frameLayoutpassword"
+                    android:layout_width="309dp"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/orange"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.47"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewpassword">
+
+                    <EditText
+                        android:id="@+id/edittextpassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2dp"
+                        android:background="@color/gray"
+                        android:ems="10"
+                        android:inputType="textPassword"
+                        tools:ignore="MissingConstraints" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frameLayoutconfirmpassword"
+                    android:layout_width="309dp"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/orange"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.47"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewconfirmpassword">
+
+                    <EditText
+                        android:id="@+id/edittextconfirmpassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2dp"
+                        android:background="@color/gray"
+                        android:ems="10"
+                        android:inputType="textPassword"
+                        tools:ignore="MissingConstraints" />
+                </FrameLayout>
+
+                <Button
+                    android:id="@+id/buttonregister"
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="40dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/registration"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/frameLayoutconfirmpassword" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="@string/account_exist"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/buttonregister" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

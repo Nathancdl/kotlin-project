@@ -9,6 +9,23 @@
     <string name="submit">Poster</string>
     <string name="placeholderedittext">Tapez quelque chose...</string>
 
+    /*Register*/
+    <string name="personalinformation">Information Personnelles</string>
+    <string name="fillfields">Veuillez remplir les champs suivants</string>
+    <string name="fullname">Nom Complet</string>
+    <string name="email">Adresse Email</string>
+    <string name="birth">Date de naissance</string>
+    <string name="genre">Genre</string>
+    <string name="username">Nom d\'utilisateur</string>
+    <string name="password">Mot de passe</string>
+    <string name="confirmepassword">Confirmez votre mot de passe</string>
+    <string-array name="array_genre">
+        <item>Homme</item>
+        <item>Femme</item>
+        <item>Autres</item>
+    </string-array>
+
+
     /* Menu */
     <string name="home">Home</string>
     <string name="newpost">New post</string>

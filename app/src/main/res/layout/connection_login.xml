@@ -45,7 +45,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registration"
+        app:layout_constraintTop_toBottomOf="@+id/registrationbutton"
         tools:ignore="MissingConstraints,SmallSp" />
 
     <Button
@@ -65,7 +65,7 @@
 
 
     <Button
-        android:id="@+id/registration"
+        android:id="@+id/registrationbutton"
         android:layout_width="320dp"
         android:layout_height="50dp"
         android:layout_marginTop="40dp"

@@ -291,7 +291,7 @@
 
     <!-- UpdateProfile  -->
     <Button
-        android:id="@+id/registration"
+        android:id="@+id/registrationbutton"
         android:layout_width="320dp"
         android:layout_height="50dp"
         android:layout_marginTop="50dp"
@@ -314,7 +314,7 @@
         android:contentDescription="trash"
         android:src="@drawable/trash"
         app:layout_constraintEnd_toStartOf="@+id/deleteprofile"
-        app:layout_constraintTop_toBottomOf="@+id/registration"
+        app:layout_constraintTop_toBottomOf="@+id/registrationbutton"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -329,7 +329,7 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registration"
+        app:layout_constraintTop_toBottomOf="@+id/registrationbutton"
         tools:ignore="MissingConstraints" />
 
 
