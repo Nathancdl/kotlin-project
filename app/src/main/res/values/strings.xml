@@ -7,6 +7,7 @@
     <string name="account_exist">Vous avez déjà un compte ?</string>
     <string name="connection">Connexion</string>
     <string name="submit">Poster</string>
+    <string name="placeholderedittext">Tapez quelque chose...</string>
 
     /* Menu */
     <string name="home">Home</string>

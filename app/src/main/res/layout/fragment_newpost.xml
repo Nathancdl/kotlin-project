@@ -6,12 +6,37 @@
     android:layout_height="match_parent"
     tools:context=".MainScreen">
 
-    <TextView
-        android:id="@+id/newpost"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="new post"
-        android:textColor="@color/black"
-        tools:ignore="MissingConstraints" />
+    <Button
+        android:id="@+id/newpostsubmit"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:layout_width="316dp"
+        android:layout_height="609dp"
+        android:layout_marginTop="96dp"
+        android:background="@color/orange"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/edittextaddcomment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2.5dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:gravity="top|left"
+            tools:ignore="MissingConstraints"
+            android:hint="@string/placeholderedittext"
+            />
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

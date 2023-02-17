@@ -6,6 +6,26 @@
     android:layout_height="match_parent"
     android:background="@color/white">
 
+    <FrameLayout
+        android:layout_width="315dp"
+        android:layout_height="591dp"
+        android:layout_marginTop="116dp"
+        android:background="@color/orange"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/edittextaddcomment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2.5dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:gravity="top|left"
+            tools:ignore="MissingConstraints" />
+    </FrameLayout>
+
     <ImageButton
         android:id="@+id/buttonbacknewcomment"
         android:layout_width="40dp"
@@ -18,18 +38,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/back" />
-
-    <EditText
-        android:id="@+id/edittextaddcomment"
-        android:layout_width="360dp"
-        android:layout_height="570dp"
-        android:layout_marginTop="116dp"
-        android:ems="10"
-        android:gravity="top|left"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/buttonaddcomment"
