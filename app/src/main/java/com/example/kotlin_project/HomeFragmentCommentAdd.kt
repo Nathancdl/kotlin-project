@@ -28,7 +28,7 @@ class HomeFragmentCommentAdd : Fragment(R.layout.visual_post_comment_new){
         }
 
         rootView.findViewById<Button>(R.id.buttonaddcomment).setOnClickListener{
-            val contentText : String = rootView.findViewById<EditText>(R.id.edittextfullname).text.toString()
+            val contentText : String = rootView.findViewById<EditText>(R.id.edittextusernamelogin).text.toString()
             //envoie vers firebase et revient à la page précédente
 
         }

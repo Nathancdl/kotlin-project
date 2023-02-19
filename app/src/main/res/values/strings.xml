@@ -7,7 +7,13 @@
     <string name="account_exist">Vous avez déjà un compte ?</string>
     <string name="connection">Connexion</string>
     <string name="submit">Poster</string>
+    <string name="description">Description</string>
     <string name="placeholderedittext">Tapez quelque chose...</string>
+
+    /*Login*/
+    <string name="enterid">Entrer vos identifiants</string>
+    <string name="notaccount">Vous n’avez pas de compte ?</string>
+
 
     /*Register*/
     <string name="personalinformation">Information Personnelles</string>

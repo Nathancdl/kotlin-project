@@ -13,6 +13,12 @@ class ConnectionLoginActivity : AppCompatActivity() {
             // Open Activity Register after click button
             startActivity(Intent(this, RegistrationActivity::class.java))
         }
+        this.findViewById<Button>(R.id.button_connection).setOnClickListener {
+            // Open Activity Login after click button
+            startActivity(Intent(this, LoginActivity::class.java))
+        }
+
+
 
     }
 }

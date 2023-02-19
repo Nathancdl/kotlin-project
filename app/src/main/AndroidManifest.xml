@@ -16,10 +16,14 @@
         android:theme="@style/Theme.KotlinProject"
         tools:targetApi="31">
         <activity
-            android:name=".RegistrationActivity"
+            android:name=".LoginActivity"
             android:exported="false"
             android:theme="@style/Theme.KotlinProject.NoActionBar"
             />
+        <activity
+            android:name=".RegistrationActivity"
+            android:exported="false"
+            android:theme="@style/Theme.KotlinProject.NoActionBar" />
         <activity
             android:name=".MainScreen"
             android:exported="false"
@@ -44,7 +48,9 @@
         </activity>
         <activity
             android:name=".ConnectionLoginActivity"
-            android:exported="false">
+            android:exported="false"
+            android:theme="@style/Theme.KotlinProject.NoActionBar"
+            >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
