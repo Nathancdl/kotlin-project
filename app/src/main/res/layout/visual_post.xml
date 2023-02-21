@@ -37,7 +37,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:shapeAppearanceOverlay="@style/Circular"
             tools:ignore="MissingConstraints"
-            tools:srcCompat="@tools:sample/avatars" />
+            tools:srcCompat="@drawable/profile_default" />
 
         <ImageView
             android:id="@+id/imageclock"

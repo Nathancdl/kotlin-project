@@ -5,6 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
+import java.util.*
 
 class RegistrationActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -71,6 +74,17 @@ class RegistrationActivity : AppCompatActivity() {
                 }else{
                     //Send to data base here
                     println("verif ok ")
+                    val database = Firebase.database.reference
+                    val uuiduser = UUID.randomUUID().toString()
+                    val newuser = mapOf(
+                        "description" to inputdescription.text.toString(),
+                        "email" to inputEmail.text.toString(),
+                        "nbFollowers" to "0",
+
+                    )
+                    val pathstring = "/Users/" + uuiduser
+
+                    database.child(pathstring).setValue(newuser)
                 }
             }
 

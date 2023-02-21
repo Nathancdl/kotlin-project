@@ -12,6 +12,11 @@
         android:title="@string/newpost" />
 
     <item
+        android:id="@+id/minchat"
+        android:icon="@drawable/menu_chat"
+        android:title="@string/chat" />
+
+    <item
         android:id="@+id/misetting"
         android:icon="@drawable/setting"
         android:title="@string/setting" />

@@ -13,7 +13,9 @@ class MainScreen : AppCompatActivity() {
 
         val homeFragment = HomeFragment()
         val newPostFragment = NewPostFragment()
+        val chatFragment = ChatFragment()
         val settingsFragment = SettingsFragment()
+
 
         setCurrentFragment(homeFragment)
 
@@ -23,6 +25,7 @@ class MainScreen : AppCompatActivity() {
             when(it.itemId){
                 R.id.mihome -> setCurrentFragment(homeFragment)
                 R.id.minewpost -> setCurrentFragment(newPostFragment)
+                R.id.minchat -> setCurrentFragment(chatFragment)
                 R.id.misetting -> setCurrentFragment(settingsFragment)
             }
             true

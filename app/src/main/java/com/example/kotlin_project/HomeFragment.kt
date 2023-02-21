@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.EditorInfo
+import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.LinearLayout
 import android.widget.ScrollView
@@ -28,6 +30,22 @@ class HomeFragment : Fragment(R.layout.fragment_home){
 
         val linearLayout = scrollView.findViewById<LinearLayout>(R.id.scrolllinearlayout)
 
+        val searchbar = linearLayout.findViewById<EditText>(R.id.edittextsearchhome)
+
+        searchbar.setOnEditorActionListener { v, actionId, event ->
+            if (actionId == EditorInfo.IME_ACTION_DONE) {
+                println("Launch")
+                val fragmentManager = fragmentManager
+                val fragmentTransaction = fragmentManager?.beginTransaction()
+                val newFragment = HomeFragmentSearch()
+                fragmentTransaction?.replace(R.id.fragment_container, newFragment)
+                fragmentTransaction?.addToBackStack(null)
+                fragmentTransaction?.commit()
+                true
+            } else {
+                false
+            }
+        }
 
         linearLayout.addView(createViewPost( "1",inflater, linearLayout, "username", "content texte", 2, 2))
 
@@ -40,18 +58,7 @@ class HomeFragment : Fragment(R.layout.fragment_home){
 
 
 
-    /*
-    override fun onStart() {
-        super.onStart();
-        val view = view;
-        //val text = view?.findViewById<TextView>(R.id.hometext)
-        //text?.text = "alex"
 
-        val inflater = LayoutInflater.from(context)
-
-
-        //createVisualElement(layoutInflater.from())
-    }*/
 
 
 

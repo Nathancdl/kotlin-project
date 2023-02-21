@@ -36,14 +36,22 @@
     <string name="home">Home</string>
     <string name="newpost">New post</string>
     <string name="setting">Setting</string>
+    <string name="chat">Chats</string>
 
     /*Home*/
     <string name="welcome">Bienvenue,</string>
+
+    /*Search*/
+    <string name="follow">Suivre</string>
+
 
     /*comment*/
 
     <string name="comment">Commentaire</string>
     <string name="newcomment">Ajouter</string>
+
+    /*chat*/
+
 
 
     /* Profiles */
@@ -83,6 +91,7 @@
     <string name="notification">notification</string>
 
     <string name="profile">profile</string>
-    <string name="chat">chat</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
