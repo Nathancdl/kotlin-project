@@ -9,6 +9,11 @@ import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 
 class edit_profile : Fragment(R.layout.activity_edit_profile) {
 
@@ -26,8 +31,6 @@ class edit_profile : Fragment(R.layout.activity_edit_profile) {
             val fragmentManager = fragmentManager
             fragmentManager?.popBackStack()
         }
-
-
 
         return rootView
     }

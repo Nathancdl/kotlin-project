@@ -35,7 +35,6 @@ class HomeFragmentSearch : Fragment(R.layout.visual_searchuser){
         val linearLayout : LinearLayout = rootView.findViewById<LinearLayout>(R.id.resultsearchlayout)
 
         val searchContent = arguments?.getString("search").toString()
-        
 
 
 

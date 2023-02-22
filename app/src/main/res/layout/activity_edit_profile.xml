@@ -69,25 +69,12 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="40dp"
         android:fontFamily="@font/poppins_semibold"
-        android:text="@string/pseudo"
         android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/description2"
         app:layout_constraintStart_toEndOf="@+id/oval"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/localisation2"
-        android:layout_width="280dp"
-        android:layout_height="18dp"
-        android:layout_marginStart="10dp"
-        android:fontFamily="@font/poppins_medium"
-        android:text="@string/villeandcountry"
-        android:textColor="@color/black"
-        android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/oval"
-        app:layout_constraintTop_toBottomOf="@+id/pseudo" />
 
     <TextView
         android:id="@+id/description2"
@@ -179,93 +166,61 @@
 
 
     <!-- TEL  -->
-    <TextView
-        android:id="@+id/textetel"
-        android:layout_width="106dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="80dp"
-        android:fontFamily="@font/poppins_medium"
-        android:text="@string/Tel"
-        android:textColor="@color/black"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textelocalisation"
-        tools:ignore="MissingConstraints" />
 
-    <ImageView
-        android:id="@+id/rectanglestel"
-        android:layout_width="175dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="20dp"
-        android:contentDescription="rectanglestel"
-        android:src="@drawable/smallrectangle"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textetel"
-        tools:ignore="MissingConstraints" />
-
-
-    <EditText
-        android:id="@+id/tel"
-        android:layout_width="153dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textetel"
-        tools:ignore="MissingConstraints" />
 
     <!-- MDP  -->
+
     <TextView
         android:id="@+id/textemdp"
         android:layout_width="106dp"
         android:layout_height="24dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="80dp"
-        android:layout_marginEnd="80dp"
         android:fontFamily="@font/poppins_medium"
         android:text="@string/mdp"
         android:textColor="@color/black"
         android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textelocalisation"
         tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/rectanglesmdp"
-        android:layout_width="175dp"
+        android:layout_width="362dp"
         android:layout_height="52dp"
-        android:layout_marginEnd="20dp"
+        android:src="@drawable/bigrectangle"
         android:contentDescription="rectanglesmdp"
-        android:src="@drawable/smallrectangle"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textemdp"
         tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/mdp"
-        android:layout_width="151dp"
+        android:layout_width="340dp"
         android:layout_height="39dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="30dp"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/rectanglesmdp"
         app:layout_constraintTop_toBottomOf="@+id/textemdp"
         tools:ignore="MissingConstraints" />
 
     <!-- AboutME  -->
+
     <TextView
         android:id="@+id/texteaboutme"
         android:layout_width="106dp"
         android:layout_height="24dp"
-        android:layout_marginStart="30dp"
+        android:layout_marginStart="28dp"
         android:layout_marginTop="80dp"
         android:fontFamily="@font/poppins_medium"
         android:text="@string/aboutme"
         android:textColor="@color/black"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textetel"
+        app:layout_constraintTop_toBottomOf="@+id/textemdp"
         tools:ignore="MissingConstraints" />
 
     <ImageView
