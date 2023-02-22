@@ -5,9 +5,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.ktx.database
+import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
 import java.util.*
+import java.security.MessageDigest
 
 class RegistrationActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,7 +48,6 @@ class RegistrationActivity : AppCompatActivity() {
     }
 
     private fun VerifForm(){
-        var inputFullName : EditText = this.findViewById<EditText>(R.id.edittextusernamelogin)
         var inputEmail : EditText = this.findViewById<EditText>(R.id.edittextemail)
         //https://stackoverflow.com/questions/10028211/how-can-i-get-the-date-from-the-edittext-and-then-store-it-in-database-in-androi
         var inputbirth : EditText = this.findViewById<EditText>(R.id.edittextebirth)
@@ -56,7 +58,7 @@ class RegistrationActivity : AppCompatActivity() {
         var inputpassword : EditText = this.findViewById<EditText>(R.id.edittextpassword)
         var inputconfirmpassword : EditText = this.findViewById<EditText>(R.id.edittextconfirmpassword)
 
-        if(inputdescription.text.isEmpty() || inputFullName.text.isEmpty() || inputEmail.text.isEmpty() || inputbirth.text.isEmpty() ||
+        if(inputdescription.text.isEmpty() || inputEmail.text.isEmpty() || inputbirth.text.isEmpty() ||
             inputusername.text.isEmpty() || inputpassword.text.isEmpty() || inputconfirmpassword.text.isEmpty() ){
             DisplayAlertDialog("Formulaire incomplet", "Des champs sont vides")
         }else{
@@ -67,30 +69,55 @@ class RegistrationActivity : AppCompatActivity() {
                 DisplayAlertDialog("Email Invalide", "L'email fourni est invalide")
             }else{
 
-                //Verif Password confirm
+                val db = FirebaseFirestore.getInstance()
+                val utilisateursRef = db.collection("Utilisateurs")
 
-                if (inputpassword.text.toString() != inputconfirmpassword.text.toString()){
-                    DisplayAlertDialog("Mot de passe invalide", "Les mots de passe ssent sont différant")
+                if(inputpassword.text.toString() != inputconfirmpassword.text.toString()){
+
+                    DisplayAlertDialog("Mot de passe incorrect", "Les deux mots de passe fournie ne sont pas identiques")
+
                 }else{
-                    //Send to data base here
-                    println("verif ok ")
-                    val database = Firebase.database.reference
-                    val uuiduser = UUID.randomUUID().toString()
-                    val newuser = mapOf(
-                        "description" to inputdescription.text.toString(),
-                        "email" to inputEmail.text.toString(),
-                        "nbFollowers" to "0",
 
-                    )
-                    val pathstring = "/Users/" + uuiduser
+                FirebaseAuth.getInstance().createUserWithEmailAndPassword(inputEmail.text.toString().lowercase(), inputpassword.text.toString())
+                    .addOnCompleteListener { task ->
+                        if (task.isSuccessful) {
+                            // L'utilisateur a été inscrit avec succès
+                            val uuid = FirebaseAuth.getInstance().currentUser?.uid
+                            if (uuid != null) {
+                                // On crée un nouvel utilisateur dans la base de données
+                                val nouvelUtilisateur = hashMapOf(
+                                    "username" to inputusername.text.toString(),
+                                    "email" to inputEmail.text.toString().lowercase(),
+                                    "genre" to inputgenre.selectedItem.toString(),
+                                    "description" to inputdescription.text.toString(),
+                                    "datedenaissance" to inputbirth.text.toString(),
+                                    "uuid" to uuid,
+                                    "publication" to null
+                                )
+                                val database = Firebase.database.reference
 
-                    database.child(pathstring).setValue(newuser)
+                                val path = "Utilisateurs/" + uuid
+
+                                database.child(path).setValue(nouvelUtilisateur)
+
+                                val intent = Intent(this, MainScreen::class.java)
+                                startActivity(intent)
+
+                            }
+                        } else {
+
+                            DisplayAlertDialog("Erreur lors de l'inscription", task.exception?.message.toString())
+                        }
+                    }
+
                 }
+
+
+
             }
 
         }
 
-        println("Test Verif")
 
     }
 
@@ -105,8 +132,6 @@ class RegistrationActivity : AppCompatActivity() {
         builder.setTitle(title)
         builder.setMessage(message)
         builder.setPositiveButton("OK") { dialog, which -> null }
-
         builder.show()
-
     }
 }

@@ -58,30 +58,17 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textViewfullname"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="50dp"
-                    android:layout_marginTop="164dp"
-                    android:fontFamily="@font/poppins_medium"
-                    android:text="@string/fullname"
-                    android:textColor="@color/black"
-                    android:textSize="14sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
                     android:id="@+id/textViewemail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="50dp"
-                    android:layout_marginTop="28dp"
+                    android:layout_marginTop="156dp"
                     android:fontFamily="@font/poppins_medium"
                     android:text="@string/email"
                     android:textColor="@color/black"
                     android:textSize="14sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/frameLayoutfullname" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/textViewusername"
@@ -177,27 +164,6 @@
                     app:layout_constraintTop_toTopOf="@+id/textViewbirth" />
 
                 <FrameLayout
-                    android:id="@+id/frameLayoutfullname"
-                    android:layout_width="309dp"
-                    android:layout_height="36dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@color/orange"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.494"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textViewfullname">
-
-                    <EditText
-                        android:id="@+id/edittextusernamelogin"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="2dp"
-                        android:background="@color/gray"
-                        android:ems="10"
-                        tools:ignore="MissingConstraints" />
-                </FrameLayout>
-
-                <FrameLayout
                     android:id="@+id/frameLayoutemail"
                     android:layout_width="309dp"
                     android:layout_height="36dp"
@@ -215,6 +181,7 @@
                         android:layout_margin="2dp"
                         android:background="@color/gray"
                         android:ems="10"
+                        android:inputType="text"
                         tools:ignore="MissingConstraints" />
                 </FrameLayout>
 
@@ -273,6 +240,7 @@
                         android:layout_margin="2dp"
                         android:background="@color/gray"
                         android:ems="10"
+                        android:inputType="text"
                         tools:ignore="MissingConstraints" />
                 </FrameLayout>
 
@@ -294,6 +262,7 @@
                         android:layout_margin="2dp"
                         android:background="@color/gray"
                         android:ems="10"
+                        android:inputType="text"
                         tools:ignore="MissingConstraints" />
                 </FrameLayout>
 

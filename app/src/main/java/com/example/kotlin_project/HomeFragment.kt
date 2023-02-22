@@ -12,6 +12,12 @@ import android.widget.LinearLayout
 import android.widget.ScrollView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
+import com.google.firebase.firestore.FirebaseFirestore
 
 class HomeFragment : Fragment(R.layout.fragment_home){
 
@@ -29,6 +35,8 @@ class HomeFragment : Fragment(R.layout.fragment_home){
 
 
         val linearLayout = scrollView.findViewById<LinearLayout>(R.id.scrolllinearlayout)
+
+        SetUserName(linearLayout.findViewById<TextView>(R.id.nameuser))
 
         val searchbar = linearLayout.findViewById<EditText>(R.id.edittextsearchhome)
 
@@ -59,7 +67,24 @@ class HomeFragment : Fragment(R.layout.fragment_home){
 
 
 
+    fun SetUserName(Textview : TextView) {
+        //Reference pour charger informations d'utilisateurs
+        val ref = FirebaseDatabase.getInstance().getReference("Utilisateurs")
+        ref.child(FirebaseAuth.getInstance().currentUser?.uid.toString())
+            .addValueEventListener(object : ValueEventListener {
+                override fun onDataChange(snapshot: DataSnapshot) {
+                    //get profile info
 
+                    Textview.text = snapshot.child("username").value.toString()
+                }
+
+                override fun onCancelled(error: DatabaseError) {
+                    throw Exception("Erreur lors de la récupération des données Firebase : ${error.message}")
+                }
+
+            })
+
+    }
 
 
 
