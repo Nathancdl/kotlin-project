@@ -42,10 +42,14 @@ class HomeFragment : Fragment(R.layout.fragment_home){
 
         searchbar.setOnEditorActionListener { v, actionId, event ->
             if (actionId == EditorInfo.IME_ACTION_DONE) {
-                println("Launch")
                 val fragmentManager = fragmentManager
                 val fragmentTransaction = fragmentManager?.beginTransaction()
                 val newFragment = HomeFragmentSearch()
+
+                val args = Bundle()
+                args.putString("search", searchbar.text.toString())
+                newFragment.arguments = args
+
                 fragmentTransaction?.replace(R.id.fragment_container, newFragment)
                 fragmentTransaction?.addToBackStack(null)
                 fragmentTransaction?.commit()
@@ -74,7 +78,6 @@ class HomeFragment : Fragment(R.layout.fragment_home){
             .addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     //get profile info
-
                     Textview.text = snapshot.child("username").value.toString()
                 }
 

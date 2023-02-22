@@ -56,9 +56,9 @@ class SettingsFragment : Fragment(R.layout.activity_my_profile) {
 
     private fun loadUserInfo(rootView : View){
         //Reference pour charger informations d'utilisateurs
-        val ref = FirebaseDatabase.getInstance().getReference("Users")
+        val ref = FirebaseDatabase.getInstance().getReference("Utilisateurs")
 
-        ref.child("eQZDdsrZhDygfeEZQD")
+        ref.child(FirebaseAuth.getInstance().currentUser?.uid.toString())
             .addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     //get profile info
@@ -67,21 +67,19 @@ class SettingsFragment : Fragment(R.layout.activity_my_profile) {
                     val uid = "${snapshot.child("uid").value}"
                     val email = "${snapshot.child("email").value}"
                     val profileImage = "${snapshot.child("profileImage").value}"
-                    val pseudo = "${snapshot.child("pseudo").value}"
-                    val localisation = "${snapshot.child("localisation").value}"
+                    val pseudo = "${snapshot.child("username").value}"
                     val description = "${snapshot.child("description").value}"
-                    val nbFollowers = "${snapshot.child("nbFollowers").value}"
-                    val nbFollowing = "${snapshot.child("nbFollowing").value}"
-                    val nbPost = "${snapshot.child("nbPosts").value}"
-                    val userType = "${snapshot.child("userType").value}"
+                    //val nbFollowers = "${snapshot.child("nbFollowers").value}"
+                    //val nbFollowing = "${snapshot.child("nbFollowing").value}"
+                    //val nbPost = "${snapshot.child("nbPosts").value}"
 
 
                     rootView.findViewById<TextView>(R.id.pseudo).text = pseudo
-                    rootView.findViewById<TextView>(R.id.localisation).text = localisation
+
                     rootView.findViewById<TextView>(R.id.description).text = description
-                    rootView.findViewById<TextView>(R.id.nbFollowers).text = nbFollowers
-                    rootView.findViewById<TextView>(R.id.nbFollowing).text = nbFollowing
-                    rootView.findViewById<TextView>(R.id.nbPost).text = nbPost
+                    //rootView.findViewById<TextView>(R.id.nbFollowers).text = nbFollowers
+                    //rootView.findViewById<TextView>(R.id.nbFollowing).text = nbFollowing
+                    //rootView.findViewById<TextView>(R.id.nbPost).text = nbPost
 
 
 

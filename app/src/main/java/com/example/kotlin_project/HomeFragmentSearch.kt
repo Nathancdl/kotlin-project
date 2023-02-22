@@ -10,10 +10,14 @@ import android.widget.ImageButton
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
+import com.example.kotlin_project.Utilisateur
 
 class HomeFragmentSearch : Fragment(R.layout.visual_searchuser){
 
-    @SuppressLint("MissingInflatedId")
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -28,8 +32,33 @@ class HomeFragmentSearch : Fragment(R.layout.visual_searchuser){
             fragmentManager?.popBackStack()
         }
 
-
         val linearLayout : LinearLayout = rootView.findViewById<LinearLayout>(R.id.resultsearchlayout)
+
+        val searchContent = arguments?.getString("search").toString()
+        
+
+
+
+/*
+        val db = Firebase.firestore
+
+        val currentUserUid : String = FirebaseAuth.getInstance().currentUser?.uid.toString()
+
+        val utilisateursRef = db.collection("Utilisateurs")
+            .whereEqualTo("username", searchContent)
+
+        utilisateursRef.get()
+            .addOnSuccessListener { querySnapshot ->
+                for (document in querySnapshot) {
+
+                    val utilisateur = document.toObject(Utilisateur::class.java)
+                    linearLayout.addView(createuser(inflater, container, utilisateur.username, utilisateur.uuid))
+                }
+            }
+
+*/
+
+
 
         linearLayout.addView(createuser(inflater, container, "Alex","151"))
 
@@ -53,11 +82,17 @@ class HomeFragmentSearch : Fragment(R.layout.visual_searchuser){
         return view
     }
 
-    fun newfollow(uuidUser: String){
+    fun newfollow( uuidUser: String){
 
     println("newFollow")
 
     }
 
+    fun search(search : String){
+        println("Recherche Effectuer")
+        println(search)
+
+
+    }
 
 }
