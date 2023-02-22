@@ -132,7 +132,7 @@
             android:layout_margin="2dp"
             android:background="@color/gray"
             android:ems="10"
-            android:inputType="text"
+            android:inputType="textPassword"
             tools:ignore="MissingConstraints" />
 
     </FrameLayout>
